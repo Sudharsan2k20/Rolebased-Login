@@ -20,6 +20,13 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('Signup_login_view');
+	}
+
+	public function getSignDetails(){
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		echo $email;
+		echo $password;
 	}
 }
