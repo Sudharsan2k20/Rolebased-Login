@@ -26,7 +26,8 @@ class Welcome extends CI_Controller {
 	public function getSignDetails(){
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
-		echo $email;
-		echo $password;
+		var_dump($email,$password);
+
+		$result = $this->Signup_modal->updateSignup($email, $password);
 	}
 }
